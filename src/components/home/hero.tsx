@@ -24,7 +24,7 @@ export function Hero() {
           The Art of Bespoke Tailoring
         </h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-primary-foreground/80">
-          Experience unparalleled craftsmanship and timeless style. Your perfect suit awaits.
+          We believe a perfect fit is a right, not a luxury. Our craft is built on a simple foundation: quality, precision, and a personal touch.
         </p>
         <Button size="lg" asChild>
           <Link href="#booking">Discover Your Style</Link>
