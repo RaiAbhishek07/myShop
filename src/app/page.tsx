@@ -30,25 +30,17 @@ function About() {
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-card">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="space-y-4">
+        <div className="grid gap-10 lg:grid-cols-1 lg:gap-16">
+          <div className="space-y-4 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
               A Legacy of Craftsmanship
             </h2>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[800px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               For over three decades, Select Men's Tailor has been dedicated to the art of bespoke tailoring. Our master craftsmen combine traditional techniques with modern sensibilities to create suits that are not just garments, but extensions of your personality.
             </p>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[800px] mx-auto text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               We believe that a well-made suit is an investment. That's why we source only the finest fabrics from around the world and dedicate countless hours to ensure every stitch is perfect.
             </p>
-          </div>
-          <div className="flex items-center justify-center">
-             <div className="bg-muted rounded-lg p-8 text-center">
-                <h3 className="text-2xl font-bold font-headline mb-4">Visit Our Atelier</h3>
-                <p className="text-muted-foreground mb-2">123 Savile Row, London, W1S 3PL</p>
-                <p className="text-muted-foreground mb-6">Mon - Sat: 9am - 6pm</p>
-                <Button>Get Directions</Button>
-            </div>
           </div>
         </div>
       </div>
