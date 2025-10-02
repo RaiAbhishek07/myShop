@@ -2,7 +2,6 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/home/hero";
 import { Services } from "@/components/home/services";
-import { StyleGuide } from "@/components/home/style-guide";
 import { Gallery } from "@/components/home/gallery";
 import { Contact } from "@/components/home/contact";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,7 +16,6 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
-        <StyleGuide />
         <Gallery />
         <Booking />
         <Contact />
