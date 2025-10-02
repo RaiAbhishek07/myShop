@@ -7,10 +7,10 @@ import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '#services', label: 'Services' },
-  { href: '#style-guide', label: 'Style Guide' },
-  { href: '#gallery', label: 'Gallery' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/services', label: 'Services' },
+  { href: '/#style-guide', label: 'Style Guide' },
+  { href: '/#gallery', label: 'Gallery' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export function Header() {
@@ -27,8 +27,8 @@ export function Header() {
 
   return (
     <header className={cn(
-      "sticky top-0 z-50 w-full transition-colors duration-300",
-      isScrolled ? "bg-black/60 backdrop-blur-sm border-b border-gray-800" : "bg-black/40 backdrop-blur-sm"
+      "fixed top-0 z-50 w-full transition-colors duration-300",
+      isScrolled ? "bg-black/80 backdrop-blur-sm border-b border-white/10" : "bg-transparent"
     )}>
       <div className="container flex h-20 items-center px-6">
         <div className="mr-4 flex">
@@ -45,14 +45,14 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white/90 transition-colors hover:text-white"
+              className="text-white/80 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="bg-primary text-primary-foreground font-bold hover:bg-primary/90 rounded-md">
+          <Button asChild className="bg-yellow-400 text-black font-bold hover:bg-yellow-300 rounded-md">
             <Link href="#booking">Book Appointment</Link>
           </Button>
           <button
@@ -65,7 +65,7 @@ export function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-black/80 backdrop-blur-md border-t border-gray-800">
+        <div className="md:hidden bg-black/90 backdrop-blur-md border-t border-gray-800">
           <nav className="flex flex-col items-center space-y-4 py-4">
             {navLinks.map((link) => (
               <Link

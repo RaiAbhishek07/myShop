@@ -25,7 +25,7 @@ export function Services() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-3">
-            <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-semibold text-primary">
+            <div className="inline-block rounded-lg bg-accent/20 px-3 py-1 text-sm font-semibold text-primary">
               Our Services
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">

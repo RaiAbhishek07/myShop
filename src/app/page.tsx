@@ -7,6 +7,7 @@ import { Gallery } from "@/components/home/gallery";
 import { Contact } from "@/components/home/contact";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -62,8 +63,8 @@ function Booking() {
                     </p>
                 </div>
                 <div className="mx-auto w-full max-w-sm space-y-2">
-                    <Button type="submit" size="lg" className="w-full" variant="default">
-                        Book an Appointment
+                    <Button type="submit" size="lg" className="w-full" variant="default" asChild>
+                        <Link href="#contact">Book an Appointment</Link>
                     </Button>
                 </div>
             </div>

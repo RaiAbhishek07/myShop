@@ -10,7 +10,7 @@ export function Hero() {
         alt="A well-dressed man in a bespoke suit stands in a tailor's workshop."
         fill
         priority
-        className="object-cover blur-sm"
+        className="object-cover"
       />
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 text-center px-4 space-y-8 max-w-4xl mx-auto">
@@ -24,8 +24,8 @@ export function Hero() {
           <Button size="lg" asChild>
             <Link href="#booking">Book an Appointment</Link>
           </Button>
-          <Button size="lg" variant="outline" asChild className="bg-transparent hover:text-white">
-            <Link href="#services">Our Services</Link>
+          <Button size="lg" variant="outline" asChild className="bg-transparent text-white hover:bg-white/10 hover:text-white border-white/50">
+            <Link href="/services">Our Services</Link>
           </Button>
         </div>
       </div>
