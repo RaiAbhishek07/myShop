@@ -14,7 +14,7 @@ const serviceCategories = [
             {
                 title: "Formal Shirt",
                 description: "Tailored for work & comfort.",
-                image: "https://picsum.photos/seed/formal-shirt/600/800",
+                image: "/images/shirt.png",
                 imageHint: "formal shirt"
             },
             {
@@ -75,7 +75,7 @@ const serviceCategories = [
             {
                 title: "Kurta-Pajama Set",
                 description: "Full kurta-pajama set, festive cream color.",
-                image: "/images/Kurta-Pajama.png",
+                image: "/images/kp.png",
                 imageHint: "Full kurta-pajama set on mannequin festive cream color catalog style with soft spotlight"
             },
             {
@@ -118,13 +118,13 @@ const serviceCategories = [
             {
                 title: "Pathani Suit",
                 description: "Stylish and unique festive attire.",
-                image: "/images/Pathani Suit.png",
+                image: "/images/ps.png",
                 imageHint: "designer kurta"
             },
             {
                 title: "Reception Blazer Suit",
                 description: "Look sharp and sophisticated for any party.",
-                image: "/images/ReceptionBlazerSuit.jpg",
+                image: "/images/rb.png",
                 imageHint: "reception suit"
             }
         ]
