@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A sign for Select Men's Tailor, specialist in suits and safaris.",
-      "imageUrl": "/images/hero-background.jpg",
-      "imageHint": "tailor sign"
+      "description": "A well-dressed man in a bespoke suit stands in a tailor's workshop.",
+      "imageUrl": "https://images.unsplash.com/photo-1557997933-4315c2635955?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0YWlsb3IlMjBzaG9wfGVufDB8fHx8MTc2MDM5ODUwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tailor shop"
     },
     {
       "id": "gallery-1",
