@@ -76,18 +76,12 @@ const serviceCategories = [
                 title: "Kurta-Pajama Set",
                 description: "Full kurta-pajama set, festive cream color.",
                 image: "/images/Kurta-Pajama.png",
-                imageHint: "kurta pajama"
-            },
-            {
-                title: "Angavastram",
-                description: "Traditional South Indian silk shawl for the shoulder.",
-                image: "https://picsum.photos/seed/shawl/600/800",
-                imageHint: "angavastram shawl"
+                imageHint: "Full kurta-pajama set on mannequin festive cream color catalog style with soft spotlight"
             },
             {
                 title: "Silk Shirt",
                 description: "Perfect for festivals and celebrations.",
-                image: "/images/Silk Veshti.png",
+                image: "https://picsum.photos/seed/silk-shirt/600/800",
                 imageHint: "silk shirt"
             }
         ]
