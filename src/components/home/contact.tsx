@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export function Contact() {
@@ -13,6 +14,7 @@ export function Contact() {
   const ownerName = "Rai Venkatesh";
   const phone = "+91 8688583959";
   const whatsappNumber = "918688583959";
+  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=SELECT+MEN'S+TAILOR,Sop+No,7-1,860/3,Lane,beside+Old+Jail+Street,near+Bombay+Tools,Nala+Bazar,Maruthi+Veedhi,Shivaji+Nagar,Secunderabad,Telangana+500003";
 
   const [name, setName] = useState('');
   const [userPhone, setUserPhone] = useState('');
@@ -84,7 +86,7 @@ export function Contact() {
         </div>
         <div className="mt-12 rounded-lg overflow-hidden border">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9205503487063!2d78.48422231487672!3d17.41584868806209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99e2a1bb5e9b%3A0x23689be50a31b4b1!2sSELECT%20MEN'S%20TAILOR!5e0!3m2!1sen!2sin!4v1719409819588!5m2!1sen!2sin"
+            src="https://www.google.com/maps?q=SELECT+MEN'S+TAILOR,+Sop+No,+7-1,+860/3,+Lane,+beside+Old+Jail+Street,+near+Bombay+Tools,+Nala+Bazar,+Maruthi+Veedhi,+Shivaji+Nagar,+Secunderabad,+Telangana+500003&output=embed"
             width="100%"
             height="450"
             style={{ border: 0 }}
@@ -93,6 +95,13 @@ export function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
             title="Google Map of SELECT MEN'S TAILOR"
           ></iframe>
+        </div>
+        <div className="mt-4 flex justify-center">
+            <Button asChild variant="outline">
+                <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
+                    View on Google Maps
+                </Link>
+            </Button>
         </div>
       </div>
     </section>
