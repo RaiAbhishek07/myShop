@@ -1,23 +1,17 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
-
   return (
     <section className="relative h-[80vh] md:h-screen w-full flex items-center justify-center text-white bg-black">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          fill
-          priority
-          className="object-cover opacity-50"
-          data-ai-hint={heroImage.imageHint}
-        />
-      )}
+      <Image
+        src="/images/hero-background.jpg"
+        alt="A well-dressed man in a bespoke suit stands in a tailor's workshop."
+        fill
+        priority
+        className="object-cover opacity-50"
+      />
       <div className="relative z-10 text-center px-4 space-y-8 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-headline !leading-tight">
           The Art of Bespoke Tailoring
