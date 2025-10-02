@@ -1,21 +1,21 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Scissors, Shirt, Wrench } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Scissors, Shirt, VenetianMask } from 'lucide-react';
 
 const services = [
   {
     icon: <Shirt className="w-10 h-10 text-primary" />,
     title: 'Bespoke Suits',
-    description: 'Experience the pinnacle of personalization with a suit tailored to your exact measurements and style preferences, crafted from the world\'s finest fabrics.',
+    description: 'Impeccably tailored suits that command respect. Each suit is a masterpiece of fit, fabric, and function, designed to elevate your presence.',
+  },
+  {
+    icon: <VenetianMask className="w-10 h-10 text-primary" />,
+    title: 'Safari & Blazers',
+    description: 'Masterfully crafted safari jackets and blazers for the modern adventurer. Perfect for those who value style, comfort, and a touch of the exotic.',
   },
   {
     icon: <Scissors className="w-10 h-10 text-primary" />,
-    title: 'Master Alterations',
-    description: 'Our expert tailors perfect the fit of your existing wardrobe, from simple hemming to complex resizing, ensuring every garment feels custom-made.',
-  },
-  {
-    icon: <Wrench className="w-10 h-10 text-primary" />,
-    title: 'Garment Restoration',
-    description: 'Breathe new life into your cherished garments. We offer expert repair and restoration to preserve your most valued pieces for years to come.',
+    title: 'Custom Menswear',
+    description: 'From sharp blazers to casual elegance, our custom menswear is designed to fit your lifestyle and crafted with the highest attention to detail.',
   },
 ];
 
@@ -32,7 +32,7 @@ export function Services() {
               Precision in Every Stitch
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              From creating your dream suit to perfecting your favorite garments, we provide a comprehensive range of tailoring services with an unwavering commitment to quality.
+              We specialize in custom suits, safari jackets, and blazers, offering a tailored experience with an unwavering commitment to quality.
             </p>
           </div>
         </div>
