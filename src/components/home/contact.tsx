@@ -10,7 +10,6 @@ import { useState } from "react";
 
 export function Contact() {
   const address = "SELECT MEN'S TAILOR, Sop No, 7-1, 860/3, Lane, beside Old Jail Street, near Bombay Tools, Nala Bazar, Maruthi Veedhi, Shivaji Nagar, Secunderabad, Telangana 500003";
-  const encodedAddress = encodeURIComponent(address);
   const ownerName = "Rai Venkatesh";
   const phone = "+91 8688583959";
   const whatsappNumber = "918688583959";
@@ -85,7 +84,7 @@ export function Contact() {
         </div>
         <div className="mt-12 rounded-lg overflow-hidden border">
           <iframe
-            src={`https://maps.google.com/maps?q=${encodedAddress}&t=&z=17&ie=UTF8&iwloc=B&output=embed`}
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9205503487063!2d78.4842223!3d17.4158487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99e2a1bb5e9b%3A0x23689be50a31b4b1!2sSELECT%20MEN&#39;S%20TAILOR!5e0!3m2!1sen!2sin!4v1689858853905!5m2!1sen!2sin"
             width="100%"
             height="450"
             style={{ border: 0 }}
