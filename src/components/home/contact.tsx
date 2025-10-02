@@ -14,7 +14,7 @@ export function Contact() {
   const ownerName = "Rai Venkatesh";
   const phone = "+91 8688583959";
   const whatsappNumber = "918688583959";
-  const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=SELECT+MEN'S+TAILOR,Sop+No,7-1,860/3,Lane,beside+Old+Jail+Street,near+Bombay+Tools,Nala+Bazar,Maruthi+Veedhi,Shivaji+Nagar,Secunderabad,Telangana+500003";
+  const googleMapsUrl = "https://maps.app.goo.gl/2ijbD9K9ph2ADDsX8";
 
   const [name, setName] = useState('');
   const [userPhone, setUserPhone] = useState('');
@@ -86,7 +86,7 @@ export function Contact() {
         </div>
         <div className="mt-12 rounded-lg overflow-hidden border">
           <iframe
-            src="https://www.google.com/maps?q=SELECT+MEN'S+TAILOR,+Sop+No,+7-1,+860/3,+Lane,+beside+Old+Jail+Street,+near+Bombay+Tools,+Nala+Bazar,+Maruthi+Veedhi,+Shivaji+Nagar,+Secunderabad,+Telangana+500003&output=embed"
+            src="https://www.google.com/maps?q=17.4361099,78.4945207&z=17&output=embed"
             width="100%"
             height="450"
             style={{ border: 0 }}
