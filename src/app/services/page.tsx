@@ -4,28 +4,121 @@ import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Check, Scissors, Shirt, VenetianMask } from "lucide-react";
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const services = [
+const serviceCategories = [
     {
-      icon: <Shirt className="w-12 h-12 text-primary" />,
-      title: 'Bespoke Suits',
-      description: 'Impeccably tailored suits that command respect. Each suit is a masterpiece of fit, fabric, and function, designed to elevate your presence.',
-      features: ["Personal Consultation", "Precision Measurements", "Premium Fabric Selection", "Multiple Fittings"]
+        title: "Formals",
+        description: "Impeccably tailored for the modern professional. Our formal wear combines timeless elegance with contemporary style.",
+        className: "bg-card",
+        items: [
+            {
+                title: "Formal Shirt",
+                description: "Tailored for work & comfort.",
+                imageHint: "formal shirt"
+            },
+            {
+                title: "Formal Trousers",
+                description: "Precision-cut for a sharp silhouette.",
+                imageHint: "formal pants"
+            },
+            {
+                title: "Business Suit",
+                description: "Command respect with our 2-piece & 3-piece suits.",
+                imageHint: "business suit"
+            },
+            {
+                title: "Blazer / Coat",
+                description: "Versatile and stylish for any occasion.",
+                imageHint: "blazer"
+            },
+            {
+                title: "Waistcoat",
+                description: "Add a layer of sophistication.",
+                imageHint: "waistcoat"
+            },
+            {
+                title: "Office Lungi with Shirt",
+                description: "A unique blend of tradition and professionalism.",
+                imageHint: "man wearing lungi"
+            },
+        ]
     },
     {
-      icon: <VenetianMask className="w-12 h-12 text-primary" />,
-      title: 'Safari & Blazers',
-      description: 'Masterfully crafted safari jackets and blazers for the modern adventurer. Perfect for those who value style, comfort, and a touch of the exotic.',
-      features: ["Custom Design", "Durable & Luxury Materials", "Functional Pockets", "Perfect for Travel"]
+        title: "Traditional Wear",
+        description: "Embrace your heritage with our exquisitely crafted traditional attire.",
+        className: "bg-secondary",
+        items: [
+            {
+                title: "Veshti / Dhoti",
+                description: "Classic Mundu / Panche for cultural events.",
+                imageHint: "man wearing dhoti"
+            },
+            {
+                title: "Silk Veshti",
+                description: "Luxurious Kasavu & Zari borders.",
+                imageHint: "silk dhoti"
+            },
+            {
+                title: "Kurta",
+                description: "Short and long kurtas for comfort and style.",
+                imageHint: "kurta"
+            },
+            {
+                title: "Kurta-Pajama Set",
+                description: "The complete traditional ensemble.",
+                imageHint: "kurta pajama"
+            },
+            {
+                title: "Angavastram",
+                description: "Elegant shawls for the shoulder.",
+                imageHint: "shawl"
+            },
+            {
+                title: "Silk Shirt",
+                description: "Perfect for festivals and celebrations.",
+                imageHint: "silk shirt"
+            }
+        ]
     },
     {
-      icon: <Scissors className="w-12 h-12 text-primary" />,
-      title: 'Custom Menswear',
-      description: 'From sharp trousers to casual elegance, our custom menswear is designed to fit your lifestyle and crafted with the highest attention to detail.',
-      features: ['Custom Shirts & Trousers', 'Waistcoats & Overcoats', 'Fabric & Style Curation', 'Accessory Pairing']
-    },
-  ];
+        title: "Occasional / Festive Wear",
+        description: "Make a statement at your next special event with our stunning collection of festive wear.",
+        className: "bg-card",
+        items: [
+            {
+                title: "Wedding Veshti Set",
+                description: "Zari & silk shirt for the groom.",
+                imageHint: "wedding groom"
+            },
+            {
+                title: "Sherwani",
+                description: "Elegant South Indian style sherwanis.",
+                imageHint: "sherwani"
+            },
+            {
+                title: "Jodhpuri Suit",
+                description: "A regal choice for formal occasions.",
+                imageHint: "jodhpuri suit"
+            },
+            {
+                title: "Indo-Western Suit",
+                description: "A fusion of modern and traditional styles.",
+                imageHint: "indo-western suit"
+            },
+            {
+                title: "Designer Kurta with Dhoti",
+                description: "Stylish and unique festive attire.",
+                imageHint: "designer kurta"
+            },
+            {
+                title: "Reception Blazer Suit",
+                description: "Look sharp and sophisticated for any party.",
+                imageHint: "reception suit"
+            }
+        ]
+    }
+];
 
 export default function ServicesPage() {
     return (
@@ -33,9 +126,10 @@ export default function ServicesPage() {
             <Header />
             <main className="flex-1">
                 <ServicesHero />
-                <ServiceDetails />
-                <Craftsmanship />
-                <Testimonials />
+                {serviceCategories.map((category) => (
+                    <ServiceCategorySection key={category.title} {...category} />
+                ))}
+                <CTA />
             </main>
             <Footer />
         </div>
@@ -44,142 +138,74 @@ export default function ServicesPage() {
 
 function ServicesHero() {
     return (
-        <section className="relative h-[60vh] w-full flex items-center justify-center text-white">
-            <Image
-                src="https://images.unsplash.com/photo-1523398356393-8b5551071294?q=80&w=2070&auto=format&fit=crop"
-                alt="A tailor meticulously working on a suit"
-                fill
-                priority
-                className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
-            <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tight font-headline !leading-tight [text-shadow:0_2px_4px_rgba(0,0,0,0.7)]">
-                    Crafted to Perfection: Our Bespoke Services
-                </h1>
-                <p className="max-w-2xl mx-auto mt-4 text-lg md:text-xl text-primary-foreground/90 [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
-                    From timeless formals to traditional masterpieces, we tailor your story.
-                </p>
-            </div>
-        </section>
-    );
-}
-
-function ServiceDetails() {
-    return (
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-secondary">
-            <div className="container px-4 md:px-6">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {services.map((service) => (
-                        <Card key={service.title} className="flex flex-col bg-card overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                            <CardHeader className="p-6 items-center text-center">
-                                <div className="p-4 bg-primary/10 rounded-full mb-4">
-                                    {service.icon}
-                                </div>
-                                <CardTitle className="font-headline text-3xl">{service.title}</CardTitle>
-                                <CardDescription className="text-base">{service.description}</CardDescription>
-                            </CardHeader>
-                            <CardContent className="p-6 flex-grow">
-                                <ul className="space-y-3 text-muted-foreground">
-                                    {service.features.map(feature => (
-                                        <li key={feature} className="flex items-center">
-                                            <Check className="w-5 h-5 mr-3 text-yellow-500 flex-shrink-0" />
-                                            <span>{feature}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </CardContent>
-                            <div className="p-6 pt-0 mt-auto">
-                                <Button className="w-full bg-yellow-400 text-black hover:bg-yellow-300" asChild>
-                                    <Link href="#contact">Inquire Now</Link>
-                                </Button>
-                            </div>
-                        </Card>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
-
-function Craftsmanship() {
-    return (
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-card">
-            <div className="container px-4 md:px-6">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline mb-4">
-                            The Art of Our Craftsmanship
-                        </h2>
-                        <p className="text-muted-foreground md:text-xl/relaxed mb-6">
-                            Our tailoring process is a blend of time-honored techniques and modern precision. We believe in a collaborative journey, from the initial measurement to the final fitting, ensuring a garment that is truly yours.
-                        </p>
-                        {/* Placeholder for process timeline */}
-                        <div className="space-y-4">
-                           <div className="flex items-center gap-4">
-                                <div className="flex-shrink-0 bg-primary text-primary-foreground h-12 w-12 rounded-full flex items-center justify-center font-bold text-xl">1</div>
-                                <p className="font-medium">Measurement & Consultation</p>
-                           </div>
-                           <div className="flex items-center gap-4">
-                                <div className="flex-shrink-0 bg-primary text-primary-foreground h-12 w-12 rounded-full flex items-center justify-center font-bold text-xl">2</div>
-                                <p className="font-medium">Fabric Selection & Design</p>
-                           </div>
-                           <div className="flex items-center gap-4">
-                                <div className="flex-shrink-0 bg-primary text-primary-foreground h-12 w-12 rounded-full flex items-center justify-center font-bold text-xl">3</div>
-                                <p className="font-medium">First & Second Fittings</p>
-                           </div>
-                           <div className="flex items-center gap-4">
-                                <div className="flex-shrink-0 bg-primary text-primary-foreground h-12 w-12 rounded-full flex items-center justify-center font-bold text-xl">4</div>
-                                <p className="font-medium">Final Touches & Delivery</p>
-                           </div>
-                        </div>
-                    </div>
-                    <div>
-                        <Image 
-                            src="https://images.unsplash.com/photo-1623578059518-bbdb071eab81?q-80&w=1887&auto=format&fit=crop"
-                            alt="Tailor's hands sewing a garment"
-                            width={600}
-                            height={700}
-                            className="rounded-lg object-cover shadow-xl"
-                            data-ai-hint="tailor sewing"
-                        />
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-}
-
-function Testimonials() {
-    return (
-        <section className="w-full py-16 md:py-24 lg:py-32 bg-secondary">
+        <section className="w-full py-16 md:py-24 lg:py-32 bg-primary text-primary-foreground">
             <div className="container px-4 md:px-6 text-center">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline mb-4">
-                    Trusted by Gentlemen
-                </h2>
-                <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl/relaxed mb-12">
-                    Our clients' satisfaction is the true measure of our success.
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tighter font-headline">
+                    Our Services – Custom Tailoring
+                </h1>
+                <p className="max-w-2xl mx-auto mt-4 text-lg md:text-xl text-primary-foreground/80">
+                    We specialize in perfectly stitched outfits for every occasion.
                 </p>
-                <div className="grid md:grid-cols-3 gap-8">
-                     {/* Placeholder for testimonials */}
-                    <Card>
-                        <CardContent className="p-6">
-                            <p className="mb-4">"The fit of my wedding suit was absolutely perfect. The compliments were endless. Thank you!"</p>
-                            <p className="font-bold font-headline">- James P.</p>
-                        </CardContent>
-                    </Card>
-                    <Card>
-                        <CardContent className="p-6">
-                            <p className="mb-4">"Incredible attention to detail. I've never owned a blazer that felt so comfortable and looked so sharp."</p>
-                            <p className="font-bold font-headline">- Michael B.</p>
-                        </CardContent>
-                    </Card>
-                    <Card>
-                        <CardContent className="p-6">
-                            <p className="mb-4">"The team guided me through fabric selection and design with such expertise. A truly bespoke experience."</p>
-                            <p className="font-bold font-headline">- David L.</p>
-                        </CardContent>
-                    </Card>
+            </div>
+        </section>
+    );
+}
+
+function ServiceCategorySection({ title, description, className, items }: (typeof serviceCategories)[0]) {
+    return (
+        <section className={`w-full py-16 md:py-24 lg:py-32 ${className}`}>
+            <div className="container px-4 md:px-6">
+                <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
+                        {title}
+                    </h2>
+                    <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
+                        {description}
+                    </p>
+                </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {items.map((item) => {
+                       const placeholder = PlaceHolderImages.find(p => p.imageHint === item.imageHint) ?? { imageUrl: `https://picsum.photos/seed/${item.title.replace(/\s+/g, '-')}/600/800`, description: item.title, imageHint: item.imageHint };
+                        return (
+                            <Card key={item.title} className="flex flex-col bg-card overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+                                <CardHeader className="p-0">
+                                    <div className="relative h-80 w-full">
+                                        <Image
+                                            src={placeholder.imageUrl}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                            data-ai-hint={item.imageHint}
+                                        />
+                                    </div>
+                                </CardHeader>
+                                <CardContent className="p-6 flex-grow flex flex-col">
+                                    <h3 className="font-headline text-2xl font-bold">{item.title}</h3>
+                                    <p className="text-muted-foreground mt-2 flex-grow">{item.description}</p>
+                                </CardContent>
+                            </Card>
+                        )
+                    })}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+
+function CTA() {
+    return (
+        <section id="booking-cta" className="w-full py-16 md:py-24 lg:py-32 bg-secondary">
+            <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+                <div className="space-y-3">
+                    <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">
+                        Get Your Perfect Fit Today!
+                    </h2>
+                </div>
+                <div className="mx-auto w-full max-w-sm space-y-2">
+                    <Button type="submit" size="lg" className="w-full" asChild>
+                        <Link href="/#contact">Book Your Stitching</Link>
+                    </Button>
                 </div>
             </div>
         </section>

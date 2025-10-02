@@ -35,6 +35,114 @@
       "description": "A portrait of a master tailor at work.",
       "imageUrl": "https://images.unsplash.com/photo-1584184924103-e310d9dc82fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXN0ZXIlMjB0YWlsb3J8ZW58MHx8fHwxNzU5MzUwMzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "master tailor"
+    },
+    {
+      "id": "services-formal-shirt",
+      "description": "A crisp, white formal shirt.",
+      "imageUrl": "https://images.unsplash.com/photo-1602810320073-1230c46d89d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3JtYWwlMjBzaGlydHxlbnwwfHx8fDE3NTkzODA1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "formal shirt"
+    },
+    {
+      "id": "services-formal-pants",
+      "description": "A pair of well-tailored formal trousers.",
+      "imageUrl": "https://picsum.photos/seed/formal-pants/600/800",
+      "imageHint": "formal pants"
+    },
+    {
+      "id": "services-business-suit",
+      "description": "A sharp, modern business suit.",
+      "imageUrl": "https://images.unsplash.com/photo-1548783300-70b41bc84f56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMHN1aXR8ZW58MHx8fHwxNzU5MzM3MDI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business suit"
+    },
+    {
+      "id": "services-blazer",
+      "description": "A stylish blazer for a smart-casual look.",
+      "imageUrl": "https://picsum.photos/seed/blazer/600/800",
+      "imageHint": "blazer"
+    },
+    {
+      "id": "services-waistcoat",
+      "description": "An elegant waistcoat.",
+      "imageUrl": "https://images.unsplash.com/photo-1716909021149-2babe84228ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3YWlzdGNvYXR8ZW58MHx8fHwxNzU5MzgwNTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "waistcoat"
+    },
+    {
+      "id": "services-lungi",
+      "description": "A man wearing a traditional lungi.",
+      "imageUrl": "https://images.unsplash.com/photo-1722696698063-1b523ac275d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFuJTIwd2VhcmluZyUyMGx1bmdpfGVufDB8fHx8MTc1OTM4MDUyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man wearing lungi"
+    },
+    {
+      "id": "services-dhoti",
+      "description": "A man wearing a traditional dhoti.",
+      "imageUrl": "https://picsum.photos/seed/man-wearing-dhoti/600/800",
+      "imageHint": "man wearing dhoti"
+    },
+    {
+      "id": "services-silk-dhoti",
+      "description": "A luxurious silk dhoti with a zari border.",
+      "imageUrl": "https://images.unsplash.com/photo-1700547949736-024ad8cb56cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzaWxrJTIwZGhvdGl8ZW58MHx8fHwxNzU5MzgwNTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "silk dhoti"
+    },
+    {
+      "id": "services-kurta",
+      "description": "A simple and elegant kurta.",
+      "imageUrl": "https://images.unsplash.com/photo-1727835523545-70ee992b5763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrdXJ0YXxlbnwwfHx8fDE3NTkzODA1Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kurta"
+    },
+    {
+      "id": "services-kurta-pajama",
+      "description": "A classic kurta-pajama set.",
+      "imageUrl": "https://picsum.photos/seed/kurta-pajama/600/800",
+      "imageHint": "kurta pajama"
+    },
+    {
+      "id": "services-shawl",
+      "description": "An elegant shawl draped over the shoulders.",
+      "imageUrl": "https://picsum.photos/seed/shawl/600/800",
+      "imageHint": "shawl"
+    },
+    {
+      "id": "services-silk-shirt",
+      "description": "A festive silk shirt.",
+      "imageUrl": "https://images.unsplash.com/photo-1642373202727-6fb657ae9507?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaWxrJTIwc2hpcnR8ZW58MHx8fHwxNzU5MzgwNTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "silk shirt"
+    },
+    {
+      "id": "services-wedding-groom",
+      "description": "A groom in a traditional wedding veshti set.",
+      "imageUrl": "https://images.unsplash.com/photo-1588436686210-52ee916118ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3ZWRkaW5nJTIwZ3Jvb218ZW58MHx8fHwxNzU5MzgwNTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wedding groom"
+    },
+    {
+      "id": "services-sherwani",
+      "description": "An elegant sherwani for a wedding.",
+      "imageUrl": "https://picsum.photos/seed/sherwani/600/800",
+      "imageHint": "sherwani"
+    },
+    {
+      "id": "services-jodhpuri-suit",
+      "description": "A regal Jodhpuri suit.",
+      "imageUrl": "https://images.unsplash.com/photo-1635680736042-4362d767f011?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxqb2RocHVyaSUyMHN1aXR8ZW58MHx8fHwxNzU5MzgwNTI5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "jodhpuri suit"
+    },
+    {
+      "id": "services-indo-western",
+      "description": "A modern Indo-Western suit.",
+      "imageUrl": "https://images.unsplash.com/photo-1579090175332-8749c125baf3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxpbmRvLXdlc3Rlcm4lMjBzdWl0fGVufDB8fHx8MTc1OTM4MDUyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indo-western suit"
+    },
+    {
+      "id": "services-designer-kurta",
+      "description": "A designer kurta with intricate details.",
+      "imageUrl": "https://images.unsplash.com/photo-1696792989068-319f5e4fc36e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkZXNpZ25lciUyMGt1cnRhfGVufDB8fHx8MTc1OTM4MDUyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "designer kurta"
+    },
+    {
+      "id": "services-reception-suit",
+      "description": "A sharp suit for a reception.",
+      "imageUrl": "https://images.unsplash.com/photo-1759054710707-e1b297817ad9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyZWNlcHRpb24lMjBzdWl0fGVufDB8fHx8MTc1OTM4MDUyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "reception suit"
     }
   ]
 }
