@@ -3,7 +3,7 @@
     {
       "id": "hero-background",
       "description": "A sign for Select Men's Tailor, specialist in suits and safaris.",
-      "imageUrl": "https://storage.googleapis.com/res-a-cloud-console-user-content-prod-2/image_uploads/2024-08-20/a9b31d87-43f1-4fd1-b51f-d72b22415147/4720993d-4c3e-4361-9c8e-a2f03f7e6f89.png",
+      "imageUrl": "/images/hero-background.jpg",
       "imageHint": "tailor sign"
     },
     {
