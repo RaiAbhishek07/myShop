@@ -5,6 +5,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 export function Contact() {
+  const address = "Sop No.7-1-860/3, Lane Beside Old Jail, Shankar Vedhi, Nala Bazar-500003";
+  const encodedAddress = encodeURIComponent(address);
+
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-card">
       <div className="container px-4 md:px-6">
@@ -19,7 +22,7 @@ export function Contact() {
             <div className="space-y-4 pt-4 text-muted-foreground">
                 <div className="space-y-1">
                     <h3 className="font-semibold text-foreground">Our Address</h3>
-                    <p>Sop No.7-1-860/3, Lane Beside Old Jail, Shankar Vedhi, Nala Bazar-500003</p>
+                    <p>{address}</p>
                 </div>
                 <div className="space-y-1">
                     <h3 className="font-semibold text-foreground pt-2">Owner</h3>
@@ -36,7 +39,7 @@ export function Contact() {
             </div>
             <div className="mt-6 rounded-lg overflow-hidden border">
               <iframe
-                src="https://maps.google.com/maps?q=Sop%20No.7-1-860/3,%20Lane%20Beside%20Old%20Jail,%20Shankar%20Vedhi,%20Nala%20Bazar-500003&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src={`https://maps.google.com/maps?q=${encodedAddress}&t=&z=15&ie=UTF8&iwloc=B&output=embed`}
                 width="100%"
                 height="350"
                 style={{ border: 0 }}
