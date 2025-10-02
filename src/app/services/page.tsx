@@ -23,8 +23,7 @@ const services = [
       icon: <Scissors className="w-12 h-12 text-primary" />,
       title: 'Custom Menswear',
       description: 'From sharp trousers to casual elegance, our custom menswear is designed to fit your lifestyle and crafted with the highest attention to detail.',
-      features.
-[('Custom Shirts & Trousers'), ('Waistcoats & Overcoats'), ('Fabric & Style Curation'), ('Accessory Pairing')]
+      features: ['Custom Shirts & Trousers', 'Waistcoats & Overcoats', 'Fabric & Style Curation', 'Accessory Pairing']
     },
   ];
 
