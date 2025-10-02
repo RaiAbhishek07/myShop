@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const serviceCategories = [
     {
@@ -15,31 +14,37 @@ const serviceCategories = [
             {
                 title: "Formal Shirt",
                 description: "Tailored for work & comfort.",
+                image: "/images/formal-shirt.png",
                 imageHint: "formal shirt"
             },
             {
                 title: "Formal Trousers",
                 description: "Precision-cut for a sharp silhouette.",
+                image: "/images/paint.png",
                 imageHint: "formal pants"
             },
             {
                 title: "Business Suit",
                 description: "Command respect with our 2-piece & 3-piece suits.",
+                image: "/images/2pieceSuite.png",
                 imageHint: "business suit"
             },
             {
                 title: "Blazer / Coat",
                 description: "Versatile and stylish for any occasion.",
+                image: "/images/blazer.png",
                 imageHint: "blazer"
             },
             {
                 title: "Waistcoat",
                 description: "Add a layer of sophistication.",
+                image: "/images/waistcoat.png",
                 imageHint: "waistcoat"
             },
             {
                 title: "Office Lungi with Shirt",
                 description: "A unique blend of tradition and professionalism.",
+                image: "/images/lungi.png",
                 imageHint: "man wearing lungi"
             },
         ]
@@ -52,31 +57,37 @@ const serviceCategories = [
             {
                 title: "Veshti / Dhoti",
                 description: "Classic Mundu / Panche for cultural events.",
+                image: "/images/Wedding Veshti.png",
                 imageHint: "man wearing dhoti"
             },
             {
                 title: "Silk Veshti",
                 description: "Luxurious Kasavu & Zari borders.",
+                image: "/images/Silk Veshti.png",
                 imageHint: "silk dhoti"
             },
             {
                 title: "Kurta",
                 description: "Short and long kurtas for comfort and style.",
+                image: "/images/Kurta(long).png",
                 imageHint: "kurta"
             },
             {
                 title: "Kurta-Pajama Set",
                 description: "The complete traditional ensemble.",
+                image: "/images/Kurta-Pajama.png",
                 imageHint: "kurta pajama"
             },
             {
                 title: "Angavastram",
                 description: "Elegant shawls for the shoulder.",
+                image: "https://picsum.photos/seed/shawl/600/800",
                 imageHint: "shawl"
             },
             {
                 title: "Silk Shirt",
                 description: "Perfect for festivals and celebrations.",
+                image: "/images/silk-shirt.png",
                 imageHint: "silk shirt"
             }
         ]
@@ -89,31 +100,37 @@ const serviceCategories = [
             {
                 title: "Wedding Veshti Set",
                 description: "Zari & silk shirt for the groom.",
+                image: "/images/Wedding Veshti.png",
                 imageHint: "wedding groom"
             },
             {
                 title: "Sherwani",
                 description: "Elegant South Indian style sherwanis.",
+                image: "/images/Sherwani.png",
                 imageHint: "sherwani"
             },
             {
                 title: "Jodhpuri Suit",
                 description: "A regal choice for formal occasions.",
+                image: "/images/Jodhpuri Suit.png",
                 imageHint: "jodhpuri suit"
             },
             {
                 title: "Indo-Western Suit",
                 description: "A fusion of modern and traditional styles.",
+                image: "/images/Indo-Western Suit.png",
                 imageHint: "indo-western suit"
             },
             {
-                title: "Designer Kurta with Dhoti",
+                title: "Pathani Suit",
                 description: "Stylish and unique festive attire.",
+                image: "/images/Pathani Suit.png",
                 imageHint: "designer kurta"
             },
             {
                 title: "Reception Blazer Suit",
                 description: "Look sharp and sophisticated for any party.",
+                image: "/images/Reception Blazer Suit.png",
                 imageHint: "reception suit"
             }
         ]
@@ -164,28 +181,25 @@ function ServiceCategorySection({ title, description, className, items }: (typeo
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {items.map((item) => {
-                       const placeholder = PlaceHolderImages.find(p => p.imageHint === item.imageHint) ?? { imageUrl: `https://picsum.photos/seed/${item.title.replace(/\s+/g, '-')}/600/800`, description: item.title, imageHint: item.imageHint };
-                        return (
-                            <Card key={item.title} className="flex flex-col bg-card overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
-                                <CardHeader className="p-0">
-                                    <div className="relative h-80 w-full">
-                                        <Image
-                                            src={placeholder.imageUrl}
-                                            alt={item.title}
-                                            fill
-                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                            data-ai-hint={item.imageHint}
-                                        />
-                                    </div>
-                                </CardHeader>
-                                <CardContent className="p-6 flex-grow flex flex-col">
-                                    <h3 className="font-headline text-2xl font-bold">{item.title}</h3>
-                                    <p className="text-muted-foreground mt-2 flex-grow">{item.description}</p>
-                                </CardContent>
-                            </Card>
-                        )
-                    })}
+                    {items.map((item) => (
+                        <Card key={item.title} className="flex flex-col bg-card overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+                            <CardHeader className="p-0">
+                                <div className="relative h-80 w-full">
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        fill
+                                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                        data-ai-hint={item.imageHint}
+                                    />
+                                </div>
+                            </CardHeader>
+                            <CardContent className="p-6 flex-grow flex flex-col">
+                                <h3 className="font-headline text-2xl font-bold">{item.title}</h3>
+                                <p className="text-muted-foreground mt-2 flex-grow">{item.description}</p>
+                            </CardContent>
+                        </Card>
+                    ))}
                 </div>
             </div>
         </section>
