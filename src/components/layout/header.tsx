@@ -29,12 +29,12 @@ export function Header() {
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-colors duration-300",
-      isScrolled ? "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" : "bg-transparent"
+      isScrolled ? "bg-black/60 backdrop-blur-sm" : "bg-transparent"
     )}>
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-20 items-center px-6">
         <div className="mr-4 flex">
           <Link href="/" className="flex items-center space-x-2">
-            <div className={cn("flex items-center", isScrolled ? "text-primary" : "text-white")}>
+            <div className="flex items-center text-white">
                 <span className="font-headline font-bold text-2xl tracking-tight">
                     Select Men's Tailor
                 </span>
@@ -46,18 +46,18 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={cn("transition-colors hover:text-white/80", isScrolled ? "text-foreground/60 hover:text-foreground/80" : "text-white/70")}
+              className="text-white/90 transition-colors hover:text-accent"
             >
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild variant={isScrolled ? "default" : "outline"}>
+          <Button asChild className="bg-accent text-accent-foreground font-bold hover:bg-accent/90 rounded-md">
             <Link href="#booking">Book Appointment</Link>
           </Button>
           <button
-            className={cn("md:hidden", isScrolled ? "text-primary" : "text-white")}
+            className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -66,13 +66,13 @@ export function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-background border-t">
+        <div className="md:hidden bg-black/80 backdrop-blur-md border-t border-gray-800">
           <nav className="flex flex-col items-center space-y-4 py-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-foreground/80"
+                className="text-white/90 hover:text-accent"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
