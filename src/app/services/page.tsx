@@ -14,7 +14,7 @@ const serviceCategories = [
             {
                 title: "Formal Shirt",
                 description: "Tailored for work & comfort.",
-                image: "/images/formal-shirt.png",
+                image: "https://picsum.photos/seed/formal-shirt/600/800",
                 imageHint: "formal shirt"
             },
             {
@@ -87,7 +87,7 @@ const serviceCategories = [
             {
                 title: "Silk Shirt",
                 description: "Perfect for festivals and celebrations.",
-                image: "/images/silk-shirt.png",
+                image: "https://picsum.photos/seed/silk-shirt/600/800",
                 imageHint: "silk shirt"
             }
         ]
@@ -130,7 +130,7 @@ const serviceCategories = [
             {
                 title: "Reception Blazer Suit",
                 description: "Look sharp and sophisticated for any party.",
-                image: "/images/Reception Blazer Suit.png",
+                image: "/images/ReceptionBlazerSuit.jpg",
                 imageHint: "reception suit"
             }
         ]
