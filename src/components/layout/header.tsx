@@ -24,6 +24,13 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleBookAppointment = () => {
+    const whatsappNumber = "918688583959";
+    const message = "Hello! I'd like to book an appointment.";
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <header className={cn(
       "fixed top-0 z-50 w-full transition-colors duration-300",
@@ -51,8 +58,8 @@ export function Header() {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="bg-yellow-400 text-black font-bold hover:bg-yellow-300 rounded-md">
-            <Link href="#booking">Book Appointment</Link>
+          <Button onClick={handleBookAppointment} className="bg-yellow-400 text-black font-bold hover:bg-yellow-300 rounded-md">
+            Book Appointment
           </Button>
           <button
             className="md:hidden text-white"

@@ -1,14 +1,21 @@
+'use client';
+
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/home/hero";
 import { Services } from "@/components/home/services";
 import { Gallery } from "@/components/home/gallery";
 import { Contact } from "@/components/home/contact";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export default function Home() {
+  const handleBookAppointment = () => {
+    const whatsappNumber = "918688583959";
+    const message = "Hello! I'd like to book an appointment.";
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
@@ -17,7 +24,7 @@ export default function Home() {
         <About />
         <Services />
         <Gallery />
-        <Booking />
+        <Booking onBookAppointment={handleBookAppointment} />
         <Contact />
       </main>
       <Footer />
@@ -48,7 +55,7 @@ function About() {
 }
 
 
-function Booking() {
+function Booking({ onBookAppointment }: { onBookAppointment: () => void }) {
     return (
         <section id="booking" className="w-full py-16 md:py-24 lg:py-32 bg-secondary">
             <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
@@ -61,8 +68,8 @@ function Booking() {
                     </p>
                 </div>
                 <div className="mx-auto w-full max-w-sm space-y-2">
-                    <Button type="submit" size="lg" className="w-full" variant="default" asChild>
-                        <Link href="#contact">Book an Appointment</Link>
+                    <Button type="button" size="lg" className="w-full" variant="default" onClick={onBookAppointment}>
+                        Book an Appointment
                     </Button>
                 </div>
             </div>

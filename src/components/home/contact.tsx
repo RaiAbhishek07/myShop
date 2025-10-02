@@ -1,15 +1,30 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone } from "lucide-react";
+import { useState } from "react";
 
 export function Contact() {
   const address = "Sop No.7-1-860/3, Lane Beside Old Jail, Shankar Vedhi, Nala Bazar-500003";
   const encodedAddress = encodeURIComponent(address);
   const ownerName = "Rai Venkatesh";
   const phone = "+91 8688583959";
+  const whatsappNumber = "918688583959";
+
+  const [name, setName] = useState('');
+  const [userPhone, setUserPhone] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    const whatsappMessage = `Name: ${name}\nPhone: ${userPhone}\nMessage: ${message}`;
+    const encodedWhatsappMessage = encodeURIComponent(whatsappMessage);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedWhatsappMessage}`, '_blank');
+  };
 
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-card">
@@ -50,18 +65,18 @@ export function Contact() {
               <CardDescription>Let us know how we can assist you.</CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSendMessage}>
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
-                  <Input id="name" placeholder="John Doe" />
+                  <Input id="name" placeholder="John Doe" value={name} onChange={(e) => setName(e.target.value)} required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="johndoe@example.com" />
+                  <Label htmlFor="phone">Phone Number</Label>
+                  <Input id="phone" type="tel" placeholder="+91 12345 67890" value={userPhone} onChange={(e) => setUserPhone(e.target.value)} required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="Your message..." rows={4} />
+                  <Textarea id="message" placeholder="Your message..." rows={4} value={message} onChange={(e) => setMessage(e.target.value)} required />
                 </div>
                 <Button type="submit" className="w-full">Send Message</Button>
               </form>

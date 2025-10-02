@@ -1,8 +1,18 @@
+'use client';
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export function Hero() {
+
+  const handleBookAppointment = () => {
+    const whatsappNumber = "918688583959";
+    const message = "Hello! I'd like to book an appointment.";
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <section className="relative h-[80vh] md:h-screen w-full flex items-center justify-center text-white">
       <Image
@@ -21,8 +31,8 @@ export function Hero() {
           We believe a perfect fit is a right, not a luxury. Our craft is built on a simple foundation: quality, precision, and a personal touch.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" asChild>
-            <Link href="#booking">Book an Appointment</Link>
+          <Button size="lg" onClick={handleBookAppointment}>
+            Book an Appointment
           </Button>
           <Button size="lg" variant="outline" asChild className="bg-transparent text-white hover:bg-white/10 hover:text-white border-white/50">
             <Link href="/services">Our Services</Link>
