@@ -84,7 +84,7 @@ export function Contact() {
         </div>
         <div className="mt-12 rounded-lg overflow-hidden border">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9205503487063!2d78.4842223!3d17.4158487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99e2a1bb5e9b%3A0x23689be50a31b4b1!2sSELECT%20MEN&#39;S%20TAILOR!5e0!3m2!1sen!2sin!4v1689858853905!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9205503487063!2d78.4842223!3d17.4158487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99e2a1bb5e9b%3A0x23689be50a31b4b1!2sSELECT%20MEN'S%20TAILOR!5e0!3m2!1sen!2sin!4v1719409819588!5m2!1sen!2sin"
             width="100%"
             height="450"
             style={{ border: 0 }}
