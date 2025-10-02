@@ -9,7 +9,7 @@ import { MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 export function Contact() {
-  const address = "Sop No.7-1-860/3, Lane Beside Old Jail, Shankar Vedhi, Nala Bazar-500003";
+  const address = "SELECT MEN'S TAILOR, Sop No, 7-1, 860/3, Lane, beside Old Jail Street, near Bombay Tools, Nala Bazar, Maruthi Veedhi, Shivaji Nagar, Secunderabad, Telangana 500003";
   const encodedAddress = encodeURIComponent(address);
   const ownerName = "Rai Venkatesh";
   const phone = "+91 8688583959";
