@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Logo } from '@/components/logo';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
@@ -29,7 +28,7 @@ export function Header() {
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-colors duration-300",
-      isScrolled ? "bg-black/60 backdrop-blur-sm" : "bg-transparent"
+      isScrolled ? "bg-black/60 backdrop-blur-sm border-b border-gray-800" : "bg-black/40 backdrop-blur-sm"
     )}>
       <div className="container flex h-20 items-center px-6">
         <div className="mr-4 flex">
@@ -46,14 +45,14 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white/90 transition-colors hover:text-accent"
+              className="text-white/90 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild className="bg-accent text-accent-foreground font-bold hover:bg-accent/90 rounded-md">
+          <Button asChild className="bg-primary text-primary-foreground font-bold hover:bg-primary/90 rounded-md">
             <Link href="#booking">Book Appointment</Link>
           </Button>
           <button
@@ -72,7 +71,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/90 hover:text-accent"
+                className="text-white/90 hover:text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
