@@ -3,14 +3,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 export function Contact() {
   const address = "Sop No.7-1-860/3, Lane Beside Old Jail, Shankar Vedhi, Nala Bazar-500003";
   const encodedAddress = encodeURIComponent(address);
   const ownerName = "Rai Venkatesh";
   const phone = "+91 8688583959";
-  const email = "contact@selectmenstailor.com";
 
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-card">
@@ -42,15 +41,6 @@ export function Contact() {
               <div className="space-y-1">
                 <h3 className="text-lg font-semibold font-headline">Phone</h3>
                 <p className="text-muted-foreground">{phone}</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                    <Mail className="h-6 w-6 text-primary" />
-                </div>
-              <div className="space-y-1">
-                <h3 className="text-lg font-semibold font-headline">Email</h3>
-                <p className="text-muted-foreground">{email}</p>
               </div>
             </div>
           </div>
